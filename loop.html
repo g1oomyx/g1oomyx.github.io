@@ -225,6 +225,135 @@
 </ul>
  
 <h2 id="form">Форма</h2>
+ <form action="/" method="POST">
+
+    <p>
+
+        <label>
+
+            ФИО:<br>
+
+            <input type="text" name="fio" required>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            Телефон:<br>
+
+            <input type="tel" name="phone" required>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            E-mail:<br>
+
+            <input type="email" name="email" required>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            Дата рождения:<br>
+
+            <input type="date" name="birthdate" required>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        Пол:<br>
+
+        <label>
+
+            <input type="radio" name="gender" value="male" required>
+
+            Мужской
+
+        </label>
+
+        <label>
+
+            <input type="radio" name="gender" value="female">
+
+            Женский
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            Любимый язык программирования:<br>
+
+            <select name="language[]" multiple>
+                <option value="c">C</option>
+
+                <option value="cpp">C++</option>
+
+                <option value="javascript">JavaScript</option>
+
+                <option value="php">PHP</option>
+
+                <option value="python">Python</option>
+
+                <option value="java">Java</option>
+
+
+            </select>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            Биография:<br>
+
+            <textarea name="biography" rows="6" cols="40"></textarea>
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            <input type="checkbox" name="contract" required>
+
+            С контрактом ознакомлен(а)
+
+        </label>
+
+    </p>
+
+    <p>
+
+        <button type="submit">Сохранить</button>
+
+    </p>
+
+</form>
  
 <form>
  
