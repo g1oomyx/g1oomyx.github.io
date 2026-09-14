@@ -6,14 +6,15 @@
  
     <meta charset="UTF-8">
  
-    <title> первый уровень </title>
+    <title>первый уровень</title>
  
 </head>
  
 <body>
+
     <h1>Страница первого уровня</h1>
 
-<a href="../../loop.html">Страница двумя уровнями выше</a>
+<a href="../../loop.html">вернутся на главную</a>
  
 </body>
 </html>
