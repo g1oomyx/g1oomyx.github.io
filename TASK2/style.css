@@ -7,3 +7,7 @@
 nav {
  clear: both;
 }
+#header {
+  background-color:#0033FF;
+  padding:100px;
+}
