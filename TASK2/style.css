@@ -5,6 +5,7 @@
 
   <head>
     <title>Ширина, выравнивание, float</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <!-- по умолчанию body блочный элемент, занимает 100% ширины родительского элемента html и имеет небольшой отступ margin по краям -->
