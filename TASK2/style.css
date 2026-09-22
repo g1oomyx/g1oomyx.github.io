@@ -1,4 +1,6 @@
-/* Общие настройки */
+/* ==================================================
+   ОБЩИЕ НАСТРОЙКИ
+   ================================================== */
 
 * {
     box-sizing: border-box;
@@ -6,94 +8,117 @@
 
 body {
     margin: 0;
+    padding: 0;
+
     font-family: Arial, sans-serif;
+
     background-color: #ffffff;
     color: #222222;
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* ==================================================
+   HEADER — ШАПКА САЙТА
+   ================================================== */
 
 #header {
     width: 100%;
+
     background-color: #4f79a8;
 }
 
+
+/* Контент внутри шапки */
+
 .header-content {
     max-width: 960px;
-    margin: 0 auto;
     min-height: 130px;
+
+    margin: 0 auto;
+
+    position: relative;
 
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 
-/* Логотип */
+/* ==================================================
+   ЛОГОТИП
+   ================================================== */
 
-.logo {
+#logo {
     width: 100px;
     height: 100px;
 
-    border: 2px solid #222;
+    object-fit: contain;
+
+    border: 2px solid #222222;
     border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-right: 20px;
+}
 
+
+/* ==================================================
+   НАЗВАНИЕ САЙТА
+   ================================================== */
+
+.header-content > h1 {
+    margin: 0;
+
+    font-size: 24px;
     font-weight: bold;
 }
 
 
-/* Название сайта */
-
-.site-title {
-    margin-left: 20px;
-}
-
-.site-title h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-
-/* Меню */
+/* ==================================================
+   МЕНЮ
+   ================================================== */
 
 #menu {
     position: absolute;
-    right: 0;
+
     top: 20px;
+    right: 0;
 
     display: flex;
     gap: 25px;
 }
 
+
+/* Ссылки меню */
+
 #menu a {
-    color: #222;
+    color: #222222;
+
     text-decoration: none;
+
     font-weight: bold;
 }
+
+
+/* При наведении */
 
 #menu a:hover {
     text-decoration: underline;
 }
 
 
-/* =========================
+/* ==================================================
    ОСНОВНОЙ КОНТЕНТ
-   ========================= */
+   ================================================== */
 
 .container {
     max-width: 960px;
+
     margin: 30px auto;
 }
 
 
-/* Блоки */
+/* ==================================================
+   ОТДЕЛЬНЫЕ БЛОКИ
+   ================================================== */
 
 .block {
     margin-bottom: 25px;
@@ -102,88 +127,174 @@ body {
     border: 1px solid #cccccc;
 }
 
+
+/* Заголовки блоков */
+
 .block h2 {
     margin-top: 0;
 }
 
 
-/* =========================
+/* ==================================================
+   СПИСОК ГИПЕРССЫЛОК
+   ================================================== */
+
+#links ul {
+    line-height: 1.8;
+}
+
+
+/* ==================================================
    ТАБЛИЦА
-   ========================= */
+   ================================================== */
 
 table {
     width: 100%;
+
     border-collapse: collapse;
 }
+
+
+/* Ячейки */
 
 th,
 td {
     border: 1px solid #222222;
+
     padding: 10px;
+
     text-align: center;
 }
 
+
+/* Заголовок таблицы */
+
 th {
     background-color: #4f79a8;
+
     color: white;
+
+    font-weight: bold;
 }
 
 
-/* Чередование строк */
+/* Нечётные строки */
 
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
 }
+
+
+/* Чётные строки */
 
 tbody tr:nth-child(even) {
     background-color: #e6e6e6;
 }
 
 
-/* =========================
+/* ==================================================
    ФОРМА
-   ========================= */
+   ================================================== */
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     max-width: 500px;
 }
 
-input,
-textarea {
-    padding: 8px;
-    font-size: 16px;
+
+/* Отдельные элементы формы */
+
+form p {
+    margin-bottom: 15px;
 }
 
+
+/* Поля ввода */
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    padding: 8px;
+
+    font-size: 16px;
+
+    border: 1px solid #999999;
+
+    border-radius: 3px;
+}
+
+
+/* Размер текстовых полей */
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+}
+
+
+/* Выпадающий список */
+
+select {
+    min-width: 200px;
+}
+
+
+/* Текстовое поле */
+
 textarea {
+    width: 100%;
+
     min-height: 100px;
+
     resize: vertical;
 }
 
+
+/* Кнопка */
+
 button {
     width: 120px;
+
     padding: 8px;
 
     cursor: pointer;
+
+    border: 1px solid #555555;
+
+    background-color: #eeeeee;
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Наведение на кнопку */
+
+button:hover {
+    background-color: #dddddd;
+}
+
+
+/* ==================================================
+   FOOTER — ПОДВАЛ
+   ================================================== */
 
 #footer {
     width: 100%;
+
     background-color: #4f79a8;
 }
 
+
+/* Содержимое подвала */
+
 .footer-content {
     max-width: 960px;
-    margin: 0 auto;
 
     min-height: 80px;
+
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
