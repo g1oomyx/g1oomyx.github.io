@@ -169,7 +169,7 @@ tbody tr:nth-child(even) {
 /* Нечётные строки */
 
 tbody tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #e8a0bf;
 }
 
 
