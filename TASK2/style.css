@@ -1,13 +1,190 @@
-#logo {
- width: 100px;
- height: 100px;
- float: left;
- margin-right: 10px;
+/* Общие настройки */
+
+* {
+    box-sizing: border-box;
 }
-nav {
- clear: both;
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
 }
+
+
+/* =========================
+   HEADER
+   ========================= */
+
 #header {
-  background-color:#0033FF;
-  padding:100px;
+    width: 100%;
+    background-color: #4f79a8;
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 130px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Логотип */
+
+.logo {
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid #222;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* Название сайта */
+
+.site-title {
+    margin-left: 20px;
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/* Меню */
+
+#menu {
+    position: absolute;
+    right: 0;
+    top: 20px;
+
+    display: flex;
+    gap: 25px;
+}
+
+#menu a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   ОСНОВНОЙ КОНТЕНТ
+   ========================= */
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+}
+
+
+/* Блоки */
+
+.block {
+    margin-bottom: 25px;
+    padding: 15px;
+
+    border: 1px solid #cccccc;
+}
+
+.block h2 {
+    margin-top: 0;
+}
+
+
+/* =========================
+   ТАБЛИЦА
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #222222;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4f79a8;
+    color: white;
+}
+
+
+/* Чередование строк */
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+
+/* =========================
+   ФОРМА
+   ========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 500px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    width: 120px;
+    padding: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+#footer {
+    width: 100%;
+    background-color: #4f79a8;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
 }
