@@ -18,21 +18,17 @@ body {
 
 
 /* ==================================================
-   HEADER — ШАПКА САЙТА
+   HEADER — ШАПКА
    ================================================== */
 
 #header {
     width: 100%;
-
     background-color: #4f79a8;
 }
 
-
-/* Контент внутри шапки */
-
 .header-content {
     max-width: 960px;
-    min-height: 130px;
+    min-height: 100px;
 
     margin: 0 auto;
 
@@ -48,8 +44,8 @@ body {
    ================================================== */
 
 #logo {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 
     object-fit: contain;
 
@@ -79,15 +75,12 @@ body {
 #menu {
     position: absolute;
 
-    top: 20px;
+    top: 15px;
     right: 0;
 
     display: flex;
     gap: 25px;
 }
-
-
-/* Ссылки меню */
 
 #menu a {
     color: #222222;
@@ -96,9 +89,6 @@ body {
 
     font-weight: bold;
 }
-
-
-/* При наведении */
 
 #menu a:hover {
     text-decoration: underline;
@@ -117,7 +107,7 @@ body {
 
 
 /* ==================================================
-   ОТДЕЛЬНЫЕ БЛОКИ
+   БЛОКИ
    ================================================== */
 
 .block {
@@ -126,9 +116,6 @@ body {
 
     border: 1px solid #cccccc;
 }
-
-
-/* Заголовки блоков */
 
 .block h2 {
     margin-top: 0;
@@ -154,9 +141,6 @@ table {
     border-collapse: collapse;
 }
 
-
-/* Ячейки */
-
 th,
 td {
     border: 1px solid #222222;
@@ -165,9 +149,6 @@ td {
 
     text-align: center;
 }
-
-
-/* Заголовок таблицы */
 
 th {
     background-color: #4f79a8;
@@ -178,17 +159,17 @@ th {
 }
 
 
-/* Нечётные строки */
-
-tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-
 /* Чётные строки */
 
 tbody tr:nth-child(even) {
     background-color: #e6e6e6;
+}
+
+
+/* Нечётные строки */
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 
 
@@ -200,15 +181,12 @@ form {
     max-width: 500px;
 }
 
-
-/* Отдельные элементы формы */
-
 form p {
     margin-bottom: 15px;
 }
 
 
-/* Поля ввода */
+/* Поля */
 
 input[type="text"],
 input[type="tel"],
@@ -226,7 +204,7 @@ select {
 }
 
 
-/* Размер текстовых полей */
+/* Текстовые поля */
 
 input[type="text"],
 input[type="tel"],
@@ -236,14 +214,14 @@ input[type="date"] {
 }
 
 
-/* Выпадающий список */
+/* Список языков */
 
 select {
     min-width: 200px;
 }
 
 
-/* Текстовое поле */
+/* Биография */
 
 textarea {
     width: 100%;
@@ -268,9 +246,6 @@ button {
     background-color: #eeeeee;
 }
 
-
-/* Наведение на кнопку */
-
 button:hover {
     background-color: #dddddd;
 }
@@ -285,9 +260,6 @@ button:hover {
 
     background-color: #4f79a8;
 }
-
-
-/* Содержимое подвала */
 
 .footer-content {
     max-width: 960px;
