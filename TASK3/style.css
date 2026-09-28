@@ -1,4 +1,4 @@
-```css
+
 
 * {
     box-sizing: border-box;
@@ -252,14 +252,13 @@ button:hover {
 
     display: flex;
     align-items: center;
-#main-aside-wrapper {
+}
+#menu {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 800px) {
-  nav-aside-wrapper {
+  #menu {
     flex-direction: row;
   }
 } 
-}
-```
