@@ -252,9 +252,6 @@ button:hover {
 
     display: flex;
     align-items: center;
-#main-aside-wrapper {
-  display: flex;
-  flex-direction: column;
-}
+
 }
 ```
