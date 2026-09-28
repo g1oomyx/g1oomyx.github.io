@@ -1,412 +1,198 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <title>Гиперссылки</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
 
-
-
 <header id="header">
-
     <div class="header-content">
-
-        
-        <img id="logo"
-             src="f254e14f1a4b990618b3adf66a352828.png"
-             alt="Наш логотип">
-
-        
-        <h1> TASK2 </h1>
-
-     
-        <nav id="menu">
-            <a href="#links">Ссылки</a>
-            <a href="#table">Таблица</a>
-            <a href="#form">Форма</a>
-        </nav>
-
+        <img id="logo" src="f254e14f1a4b990618b3adf66a352828.png" alt="Наш логотип">
+        <h1>TASK2</h1>
     </div>
-
 </header>
 
-
-
+<nav id="menu">
+    <a href="#links">Ссылки</a>
+    <a href="#table">Таблица</a>
+    <a href="#form">Форма</a>
+</nav>
 
 <main class="container">
 
-
-
     <section id="links" class="block">
-
         <h2>Список гиперссылок</h2>
-
         <ul>
-
-           
-            <li>
-                <a href="http://kubsu.ru/">КубГУ</a>
-            </li>
-
-            <li>
-                <a href="https://kubsu.ru/">КубГУ (HTTPS)</a>
-            </li>
-
-          
+            <li><a href="http://kubsu.ru/">КубГУ</a></li>
+            <li><a href="https://kubsu.ru/">КубГУ (HTTPS)</a></li>
             <li>
                 <a href="https://kubsu.ru/">
                     <img src="image.jpg" alt="КубГУ" width="300">
                 </a>
             </li>
-
-            
+            <li><a href="lev2.html">Внутренняя страница</a></li>
+            <li><a href="loop.html">Главная страница</a></li>
+            <li><a href="#form">Перейти к форме</a></li>
+            <li><a href="https://kubsu.ru/?a=1&amp;b=2&amp;c=3">КубГУ с тремя параметрами</a></li>
+            <li><a href="https://kubsu.ru/?id=123">КубГУ с параметром id</a></li>
+            <li><a href="lev2.html">Страница в текущем каталоге</a></li>
+            <li><a href="about/about.html">Страница в каталоге about</a></li>
+            <li><a href="root.html">Страница в каталоге уровнем выше</a></li>
+            <li><a href="ur1/ur2/page.html">Страница второго уровня</a></li>
             <li>
-                <a href="lev2.html">Внутренняя страница</a>
+                <p>Я учусь в <a href="https://kubsu.ru/">Кубанском государственном университете</a>.</p>
             </li>
-
-         
-            <li>
-                <a href="loop.html">Главная страница</a>
-            </li>
-
-            <li>
-                <a href="#form">Перейти к форме</a>
-            </li>
-
-          
-            <li>
-                <a href="https://kubsu.ru/?a=1&amp;b=2&amp;c=3">
-                    КубГУ с тремя параметрами
-                </a>
-            </li>
-
-           
-            <li>
-                <a href="https://kubsu.ru/?id=123">
-                    КубГУ с параметром id
-                </a>
-            </li>
-
-    
-            <li>
-                <a href="lev2.html">Страница в текущем каталоге</a>
-            </li>
-
-       
-            <li>
-                <a href="about/about.html">
-                    Страница в каталоге about
-                </a>
-            </li>
-
-            
-            <li>
-                <a href="root.html">
-                    Страница в каталоге уровнем выше
-                </a>
-            </li>
-
-        
-            <li>
-                <a href="ur1/ur2/page.html">
-                    Страница второго уровня
-                </a>
-            </li>
-
-            
-            <li>
-                <p>
-                    Я учусь в
-                    <a href="https://kubsu.ru/">
-                        Кубанском государственном университете
-                    </a>.
-                </p>
-            </li>
-
-            
-            <li>
-                <a href="https://start.kubsu.ru/FAQabitur#content">
-                    Вопросы поступающих КубГУ
-                </a>
-            </li>
-
-    
+            <li><a href="https://start.kubsu.ru/FAQabitur#content">Вопросы поступающих КубГУ</a></li>
             <li>
                 <p>Ссылки из областей изображения:</p>
-
-                <img src="image.jpg"
-                     alt="КубГУ"
-                     width="600"
-                     usemap="#kubsu-map">
-
+                <img src="image.jpg" alt="КубГУ" width="600" usemap="#kubsu-map">
                 <map name="kubsu-map">
-
-                    <area shape="rect"
-                          coords="0,0,250,200"
-                          href="https://kubsu.ru/"
-                          alt="КубГУ">
-
-                    <area shape="circle"
-                          coords="400,150,80"
-                          href="https://start.kubsu.ru/"
-                          alt="Абитуриенту КубГУ">
-
+                    <area shape="rect" coords="0,0,250,200" href="https://kubsu.ru/" alt="КубГУ">
+                    <area shape="circle" coords="400,150,80" href="https://start.kubsu.ru/" alt="Абитуриенту КубГУ">
                 </map>
             </li>
-
-
-            <li>
-                <a href="">Пустая ссылка</a>
-            </li>
-
-
-            <li>
-                <a>Ссылка без href</a>
-            </li>
-
-            <li>
-                <a href="https://kubsu.ru/" rel="nofollow">
-                    КубГУ
-                </a>
-            </li>
-
-        
+            <li><a href="">Пустая ссылка</a></li>
+            <li><a>Ссылка без href</a></li>
+            <li><a href="https://kubsu.ru/" rel="nofollow">КубГУ</a></li>
             <li>
                 <noindex>
-                    <a href="https://kubsu.ru/">
-                        КубГУ
-                    </a>
+                    <a href="https://kubsu.ru/">КубГУ</a>
                 </noindex>
             </li>
-
-
             <li>
-
                 <ol>
-
-                    <li>
-                        <a href="https://kubsu.ru/"
-                           title="Официальный сайт Кубанского государственного университета">
-                            КубГУ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://start.kubsu.ru/"
-                           title="Сайт для поступающих в КубГУ">
-                            Абитуриенту
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://start.kubsu.ru/FAQabitur"
-                           title="Вопросы и ответы для поступающих">
-                            Вопросы поступающих
-                        </a>
-                    </li>
-
+                    <li><a href="https://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">КубГУ</a></li>
+                    <li><a href="https://start.kubsu.ru/" title="Сайт для поступающих в КубГУ">Абитуриенту</a></li>
+                    <li><a href="https://start.kubsu.ru/FAQabitur" title="Вопросы и ответы для поступающих">Вопросы поступающих</a></li>
                 </ol>
-
             </li>
-
-  
-            <li>
-                <a href="ftp://user:password@kubsu.ru/file.txt">
-                    FTP-файл
-                </a>
-            </li>
-
+            <li><a href="ftp://user:password@kubsu.ru/file.txt">FTP-файл</a></li>
         </ul>
-
     </section>
 
-
-
-
     <section id="table" class="block">
-
         <h2>Таблица</h2>
-
         <table>
-
             <thead>
-
                 <tr>
                     <th>Название</th>
                     <th>Группа</th>
                     <th>Оценка</th>
                     <th>Результат</th>
                 </tr>
-
             </thead>
-
             <tbody>
-
                 <tr>
                     <td>Иван</td>
                     <td>101</td>
                     <td>5</td>
                     <td>Зачёт</td>
                 </tr>
-
                 <tr>
                     <td>Пётр</td>
                     <td>102</td>
                     <td>4</td>
                     <td>Зачёт</td>
                 </tr>
-
                 <tr>
                     <td colspan="2">Общая информация</td>
                     <td>5</td>
                     <td>Зачёт</td>
                 </tr>
-
                 <tr>
                     <td>Алексей</td>
                     <td rowspan="2">103</td>
                     <td>3</td>
                     <td>Зачёт</td>
                 </tr>
-
                 <tr>
                     <td>Максим</td>
                     <td>4</td>
                     <td>Зачёт</td>
                 </tr>
-
                 <tr>
                     <td colspan="3">Итог</td>
                     <td>Выполнено</td>
                 </tr>
-
             </tbody>
-
         </table>
-
     </section>
 
-
-
-
     <section id="form" class="block">
-
         <h2>Форма</h2>
-
         <form action="/" method="POST">
-
             <p>
                 <label>
                     ФИО:<br>
                     <input type="text" name="fio" required>
                 </label>
             </p>
-
             <p>
                 <label>
                     Телефон:<br>
                     <input type="tel" name="phone" required>
                 </label>
             </p>
-
             <p>
                 <label>
                     E-mail:<br>
                     <input type="email" name="email" required>
                 </label>
             </p>
-
             <p>
                 <label>
                     Дата рождения:<br>
                     <input type="date" name="birthdate" required>
                 </label>
             </p>
-
             <p>
                 Пол:<br>
-
                 <label>
-                    <input type="radio"
-                           name="gender"
-                           value="male"
-                           required>
-                    Мужской
+                    <input type="radio" name="gender" value="male" required> Мужской
                 </label>
-
                 <label>
-                    <input type="radio"
-                           name="gender"
-                           value="female">
-                    Женский
+                    <input type="radio" name="gender" value="female"> Женский
                 </label>
-
             </p>
-
             <p>
                 <label>
                     Любимый язык программирования:<br>
-
                     <select name="language[]" multiple>
-
                         <option value="c">C</option>
                         <option value="cpp">C++</option>
                         <option value="javascript">JavaScript</option>
                         <option value="php">PHP</option>
                         <option value="python">Python</option>
                         <option value="java">Java</option>
-
                     </select>
-
                 </label>
             </p>
-
             <p>
                 <label>
                     Биография:<br>
-
-                    <textarea name="biography"
-                              rows="6"
-                              cols="40"></textarea>
-
+                    <textarea name="biography" rows="6" cols="40"></textarea>
                 </label>
             </p>
-
             <p>
                 <label>
-                    <input type="checkbox"
-                           name="contract"
-                           required>
-
+                    <input type="checkbox" name="contract" required>
                     С контрактом ознакомлен(а)
-
                 </label>
             </p>
-
             <p>
-                <button type="submit">
-                    Сохранить
-                </button>
+                <button type="submit">Сохранить</button>
             </p>
-
         </form>
-
     </section>
-
 </main>
 
-
 <footer id="footer">
-
     <div class="footer-content">
         (c) Сергей Синица
     </div>
-
 </footer>
 
 </body>
