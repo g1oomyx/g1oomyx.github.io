@@ -252,6 +252,14 @@ button:hover {
 
     display: flex;
     align-items: center;
-
+#main-aside-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  nav-aside-wrapper {
+    flex-direction: row;
+  }
+} 
 }
 ```
