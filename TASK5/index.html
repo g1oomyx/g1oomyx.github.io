@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Калькулятор заказа</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="calculator">
+        <h1>Калькулятор заказа</h1>
+        <p class="description">Выберите товар и укажите количество.</p>
+    <form id="order-form" novalidate>
+        <label for="product">Товар</label>
+        <select id="product" name="product">
+            <option value="1200">Футболка — 1 200 ₽</option>
+            <option value="2500">Худи — 2 500 ₽</option>
+            <option value="3900">Кроссовки — 3 900 ₽</option>
+        </select>
+        <label for="quantity">Количество</label>
+        <input
+            id="quantity"
+            name="quantity"
+            type="text"
+            inputmode="numeric"
+            placeholder="Например, 2"
+            autocomplete="off"
+        >
+        <p id="error-message" class="error" role="alert"></p>
+        <button type="submit">Рассчитать стоимость</button>
+    </form>
+    <section id="result" class="result" aria-live="polite" hidden>
+        <h2>Стоимость заказа</h2>
+        <p id="result-text"></p>
+    </section>
+</main>
+</body>
+</html>
