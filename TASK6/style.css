@@ -1,1 +1,337 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #20212a;
+    --muted: #777986;
+    --line: #e6e6ec;
+    --accent: #7157e8;
+    --accent-dark: #5b43ca;
+    --surface: #ffffff;
+    --background: #f5f5fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 5%,
+        rgba(113, 87, 232, 0.10), transparent 28rem),
+        var(--background);
+    color: var(--ink);
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+.page {
+    width: min(100% - 32px, 820px);
+    margin: 48px auto 24px;
+}
+
+.calculator {
+    padding: clamp(22px, 5vw, 44px);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 24px 70px rgba(34, 30, 70, 0.08);
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.intro {
+    max-width: 590px;
+    margin: 14px 0 30px;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 14px;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.form-section {
+    margin-bottom: 26px;
+}
+
+legend,
+.field > label {
+    display: block;
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.radio-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.choice-card {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.choice-card input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.choice-content {
+    display: flex;
+    min-height: 142px;
+    flex-direction: column;
+    gap: 7px;
+    padding: 16px 14px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: #fff;
+    transition: border-color 160ms ease,
+        background 160ms ease, box-shadow 160ms ease;
+}
+
+.choice-content strong {
+    font-size: 14px;
+}
+
+.choice-content span {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.choice-content b {
+    margin-top: auto;
+    color: var(--ink);
+    font-size: 13px;
+}
+
+.choice-card input:checked + .choice-content {
+    border-color: var(--accent);
+    background: #f7f5ff;
+    box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.choice-card input:focus-visible + .choice-content {
+    outline: 3px solid rgba(113, 87, 232, 0.25);
+    outline-offset: 3px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 18px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 14px;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: var(--accent);
+    outline: 3px solid rgba(113, 87, 232, 0.12);
+}
+
+.field small,
+.checkbox-choice small {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.property-section {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fcfcff;
+}
+
+.property-section[hidden] {
+    display: none;
+}
+
+.checkbox-choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.checkbox-choice input {
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    accent-color: var(--accent);
+}
+
+.checkbox-choice strong {
+    font-size: 13px;
+}
+
+.checkbox-choice small {
+    margin-top: 4px;
+}
+
+.summary {
+    padding: 22px;
+    border-radius: 16px;
+    background: #f6f4ff;
+}
+
+.summary > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.summary-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#unit-price {
+    font-size: 16px;
+}
+
+.total-row {
+    margin-top: 17px;
+    padding-top: 17px;
+    border-top: 1px solid #e2defb;
+}
+
+.total-row .summary-label {
+    color: var(--ink);
+    font-weight: 800;
+}
+
+#total-price {
+    color: var(--accent-dark);
+    font-size: clamp(27px, 5vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.calculation-note {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.error-message {
+    margin: 12px 0 0;
+    color: #b42318;
+    font-size: 13px;
+}
+
+.reset-button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 18px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 160ms ease, border-color 160ms ease;
+}
+
+.reset-button:hover {
+    border-color: #c9c5dc;
+    background: #faf9ff;
+}
+
+footer {
+    padding: 20px 0 0;
+    color: #9293a0;
+    text-align: center;
+    font-size: 11px;
+}
+
+@media (max-width: 620px) {
+    .page {
+        width: min(100% - 20px, 820px);
+        margin-top: 14px;
+    }
+
+    .calculator {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .radio-options {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-content {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 5px 12px;
+    }
+
+    .choice-content span {
+        grid-column: 1;
+    }
+
+    .choice-content b {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin: 0;
+        text-align: right;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
