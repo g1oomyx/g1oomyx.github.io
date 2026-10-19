@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Калькулятор стоимости футболок">
+    <title>Калькулятор стоимости футболок</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="calculator" aria-labelledby="page-title">
+            <p class="eyebrow">РАСЧЁТ СТОИМОСТИ</p>
+            <h1 id="page-title">Калькулятор футболок</h1>
+            <p class="intro">
+                Выберите тип изделия, параметры и количество.
+                Стоимость обновится автоматически.
+            </p>
+
+            <form id="price-form">
+                <fieldset class="form-section">
+                    <legend>1. Тип товара</legend>
+
+                    <div class="radio-options">
+                        <label class="choice-card">
+                            <input type="radio" name="product-type"
+                                   value="basic" checked>
+                            <span class="choice-content">
+                                <strong>Базовая</strong>
+                                <span>Повседневная футболка</span>
+                                <b>800 ₽ / шт.</b>
+                            </span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="radio" name="product-type"
+                                   value="print">
+                            <span class="choice-content">
+                                <strong>С принтом</strong>
+                                <span>Футболка с изображением</span>
+                                <b>1 100 ₽ / шт.</b>
+                            </span>
+                        </label>
+
+                        <label class="choice-card">
+                            <input type="radio" name="product-type"
+                                   value="premium">
+                            <span class="choice-content">
+                                <strong>Премиум</strong>
+                                <span>Плотная ткань</span>
+                                <b>1 500 ₽ / шт.</b>
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-grid">
+                    <div class="form-section field">
+                        <label for="quantity">2. Количество, шт.</label>
+                        <input id="quantity" name="quantity"
+                               type="number" min="1" max="1000"
+                               step="1" value="1" required>
+                        <small>От 1 до 1000 штук</small>
+                    </div>
+
+                    <div class="form-section field" id="options-section">
+                        <label for="option">3. Дополнительная опция</label>
+                        <select id="option" name="option">
+                            <option value="none">Без дополнений — 0 ₽</option>
+                            <option value="size">Большой размер (+100 ₽)</option>
+                            <option value="color">Дополнительный цвет (+150 ₽)</option>
+                        </select>
+                        <small id="option-help">Выберите нужную опцию</small>
+                    </div>
+                </div>
+
+                <fieldset class="form-section property-section"
+                          id="property-section" hidden>
+                    <legend>4. Свойство товара</legend>
+                    <label class="checkbox-choice" for="gift-wrap">
+                        <input id="gift-wrap" name="gift-wrap"
+                               type="checkbox">
+                        <span>
+                            <strong>Подарочная упаковка</strong>
+                            <small>Дополнительно 200 ₽ за штуку</small>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <section class="summary" aria-live="polite"
+                         aria-atomic="true">
+                    <div>
+                        <span class="summary-label">
+                            Стоимость одной штуки
+                        </span>
+                        <strong id="unit-price">800 ₽</strong>
+                    </div>
+
+                    <div class="total-row">
+                        <span class="summary-label">Итого к оплате</span>
+                        <strong id="total-price">800 ₽</strong>
+                    </div>
+
+                    <p id="calculation-note" class="calculation-note">
+                        1 шт. × 800 ₽
+                    </p>
+                </section>
+
+                <p id="error-message" class="error-message"
+                   role="alert" hidden></p>
+
+                <button type="reset" class="reset-button">
+                    Сбросить параметры
+                </button>
+            </form>
+        </section>
+
+        <footer>Учебный проект · Задание 6 · JavaScript</footer>
+    </main>
+</body>
+</html>
+
