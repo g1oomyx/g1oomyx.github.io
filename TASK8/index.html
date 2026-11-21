@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <main class="main">
+        <div class="content">
+            <p class="subtitle">CONTACT / 2026</p>
+
+            <h1>Есть идея?<br><span>Давай обсудим.</span></h1>
+
+            <p class="description">
+                Заполни форму обратной связи, и я свяжусь с тобой
+                в ближайшее время.
+            </p>
+
+            <button class="open-button" id="openForm">
+                Связаться со мной ↗
+            </button>
+        </div>
+
+        <div class="footer">
+            <span>FEEDBACK FORM</span>
+            <span>© 2026</span>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+
+            <button class="close-button" id="closeForm" type="button">
+                ✕
+            </button>
+
+            <p class="subtitle">CONTACT FORM</p>
+            <h2>Напиши мне</h2>
+
+            <form id="contactForm">
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="name">ФИО</label>
+                        <input type="text" id="name" name="name"
+                               placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="+7 999 123-45-67">
+                    </div>
+
+                    <div class="field">
+                        <label for="organization">Организация</label>
+                        <input type="text" id="organization" name="organization"
+                               placeholder="Название организации">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message"
+                              placeholder="Расскажи подробнее..." required></textarea>
+                </div>
+
+                <label class="agreement">
+                    <input type="checkbox" id="consent" required>
+                    <span>Согласен на обработку персональных данных</span>
+                </label>
+
+                <button class="submit-button" type="submit" id="submitButton">
+                    Отправить сообщение ↗
+                </button>
+
+                <div id="result" class="result"></div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
